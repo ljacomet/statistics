@@ -1,6 +1,10 @@
 # Maven exclusions
 target/
 
+# Gradle exclusions
+.gradle/
+build/
+
 # IntelliJ exclusions
 /.idea/
 *.iml
