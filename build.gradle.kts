@@ -29,11 +29,11 @@ dependencies {
 }
 
 findbugs {
-    sourceSets = listOf(java.sourceSets["main"])
+    sourceSets = listOf(project.sourceSets["main"])
 }
 
 val sourceJar = tasks.create("sourceJar", Jar::class.java) {
-    from(java.sourceSets["main"].allSource)
+    from(sourceSets.main.map { it.allSource })
     classifier = "source"
 }
 
